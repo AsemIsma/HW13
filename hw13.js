@@ -261,8 +261,22 @@ console.log(data.stats[1].base_stat);
 
 //15.2
 
-Object.defineProperty(data.stats[1], 'base_stat', {
+Object.defineProperty(data.stats[2], 'base_stat', {
     value: 'asem',
 });
 
-console.log(data.stats[1].base_stat);
+console.log(data.stats[2].base_stat);
+
+console.log(data.stats);
+
+ //15.3
+
+ console.log(data.stats.splice(3, 1, {
+  "base_stat": 'asem',
+  "effort": 'asem',
+  "stat": {
+    "name": "defense",
+    "url": "https://pokeapi.co/api/v2/stat/3/"
+  }
+}));
+ console.log(data.stats);
